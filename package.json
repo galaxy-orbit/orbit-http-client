@@ -1,23 +1,23 @@
 {
   "name": "@galaxy-stack/orbit-http-client",
-  "version": "0.2.0",
+  "version": "0.5.1",
   "description": "Typed HTTP client for Orbit \u2014 fetch wrapper with retries, timeouts, interceptors",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
     }
   },
   "scripts": {
     "build": "bun build ./src/index.ts --outdir ./dist --target bun --packages external",
-    "build:types": "tsc --emitDeclarationOnly",
+    "build:types": "bash scripts/build-types.sh",
     "clean": "rm -rf dist",
     "changeset": "changeset"
   },
   "dependencies": {
-    "@galaxy-stack/orbit-core": "^0.1.11"
+    "@galaxy-stack/orbit-core": "^0.2.0"
   },
   "peerDependencies": {
     "reflect-metadata": "^0.2.0"
@@ -42,7 +42,7 @@
     "url": "git+https://github.com/galaxy-orbit/orbit-http-client.git"
   },
   "bugs": {
-    "url": "https://github.com/galaxy-orbit/orbit/issues"
+    "url": "https://github.com/galaxy-orbit/orbit-cli/issues"
   },
   "homepage": "https://galaxy-orbit-framework.vercel.app"
 }
